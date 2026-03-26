@@ -1,0 +1,104 @@
+{
+  "lastUpdate": "2025-03-26",
+  "articles": [
+    {
+      "id": 1,
+      "title": "Windows Server 2025 : Les nouvelles fonctionnalités à connaître",
+      "description": "Microsoft dévoile les innovations majeures de Windows Server 2025, incluant des améliorations en matière de sécurité, de virtualisation et de gestion cloud hybride.",
+      "category": "infrastructure",
+      "date": "2025-03-20",
+      "tags": ["Windows Server", "Microsoft", "Virtualisation"],
+      "url": "https://example.com/article1",
+      "source": "LeMagIT",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "title": "Cybersécurité : Les menaces Zero-Day en 2025",
+      "description": "Analyse des vulnérabilités zero-day les plus critiques détectées cette année et les stratégies de protection recommandées pour les infrastructures d'entreprise.",
+      "category": "cybersecurite",
+      "date": "2025-03-18",
+      "tags": ["Sécurité", "Zero-Day", "Protection"],
+      "url": "https://example.com/article2",
+      "source": "The Hacker News",
+      "imageUrl": ""
+    },
+    {
+      "id": 3,
+      "title": "Migration vers le Cloud : Guide pratique pour les PME",
+      "description": "Les étapes clés pour réussir sa migration vers le cloud computing : choix du fournisseur, planification, sécurité et optimisation des coûts.",
+      "category": "cloud",
+      "date": "2025-03-15",
+      "tags": ["Cloud", "Azure", "AWS", "Migration"],
+      "url": "https://example.com/article3",
+      "source": "ZDNet",
+      "imageUrl": ""
+    },
+    {
+      "id": 4,
+      "title": "Cisco Catalyst 9000 : Nouvelle génération de switches",
+      "description": "Découverte des fonctionnalités avancées des switches Cisco Catalyst 9000 pour l'automatisation réseau et la sécurité intégrée.",
+      "category": "infrastructure",
+      "date": "2025-03-12",
+      "tags": ["Cisco", "Réseau", "Switches"],
+      "url": "https://example.com/article4",
+      "source": "Cisco Blog",
+      "imageUrl": ""
+    },
+    {
+      "id": 5,
+      "title": "Ransomware : Comment protéger son infrastructure IT",
+      "description": "Les meilleures pratiques de sauvegarde, de segmentation réseau et de formation des utilisateurs pour se prémunir contre les attaques ransomware.",
+      "category": "cybersecurite",
+      "date": "2025-03-10",
+      "tags": ["Ransomware", "Sauvegarde", "Sécurité"],
+      "url": "https://example.com/article5",
+      "source": "IT Social",
+      "imageUrl": ""
+    },
+    {
+      "id": 6,
+      "title": "Multi-cloud et hybride : Les tendances 2025",
+      "description": "État des lieux du marché cloud en 2025 : adoption du multi-cloud, stratégies hybrides et nouveaux services proposés par AWS, Azure et Google Cloud.",
+      "category": "cloud",
+      "date": "2025-03-08",
+      "tags": ["Multi-cloud", "Hybride", "Tendances"],
+      "url": "https://example.com/article6",
+      "source": "TechCrunch",
+      "imageUrl": ""
+    },
+    {
+      "id": 7,
+      "title": "VMware vSphere 9 : Performances et nouveautés",
+      "description": "Test approfondi de vSphere 9 avec ses nouvelles capacités de gestion des ressources, d'automatisation et d'intégration Kubernetes.",
+      "category": "infrastructure",
+      "date": "2025-03-05",
+      "tags": ["VMware", "Virtualisation", "vSphere"],
+      "url": "https://example.com/article7",
+      "source": "Clubic Pro",
+      "imageUrl": ""
+    },
+    {
+      "id": 8,
+      "title": "Intelligence Artificielle et cybersécurité en 2025",
+      "description": "L'IA révolutionne la détection des menaces et la réponse aux incidents. Analyse des nouvelles solutions de sécurité basées sur l'apprentissage automatique.",
+      "category": "cybersecurite",
+      "date": "2025-03-03",
+      "tags": ["IA", "Machine Learning", "Sécurité"],
+      "url": "https://example.com/article8",
+      "source": "The Hacker News",
+      "imageUrl": ""
+    },
+    {
+      "id": 9,
+      "title": "Azure Arc : Gestion unifiée des environnements hybrides",
+      "description": "Comment Azure Arc permet de gérer des ressources on-premise et multi-cloud depuis une console unique avec des politiques cohérentes.",
+      "category": "cloud",
+      "date": "2025-03-01",
+      "tags": ["Azure", "Hybride", "Gestion"],
+      "url": "https://example.com/article9",
+      "source": "Microsoft Tech Community",
+      "imageUrl": ""
+    }
+  ]
+}

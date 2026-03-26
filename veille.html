@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique - Jason Boudet</title>
+    <link rel="stylesheet" href="veille.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <nav>
+        <div class="logo">&lt;JB/&gt;</div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#veille">Veille</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <!-- Header -->
+        <div class="page-header">
+            <h1 class="page-title">Veille Technologique</h1>
+            <p class="page-subtitle">
+                Restez informé des dernières tendances et innovations<br>
+                dans les domaines de l'infrastructure IT, des réseaux et de la cybersécurité
+            </p>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="intro-section">
+            <div class="intro-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h2>Pourquoi une veille technologique ?</h2>
+            <p>
+                Dans le domaine de l'IT, la veille technologique est essentielle pour rester à jour 
+                sur les évolutions rapides des technologies, anticiper les menaces de sécurité et 
+                découvrir de nouvelles solutions pour optimiser les infrastructures. Cette page regroupe 
+                mes thématiques de veille et les articles les plus pertinents que j'ai sélectionnés.
+            </p>
+        </div>
+
+        <!-- Filtres par thématique -->
+        <div class="filters-section">
+            <button class="filter-btn active" data-filter="all">
+                <span class="filter-icon">🌐</span>
+                Tous les sujets
+            </button>
+            <button class="filter-btn" data-filter="infrastructure">
+                <span class="filter-icon">🖥️</span>
+                Infrastructure
+            </button>
+            <button class="filter-btn" data-filter="cybersecurite">
+                <span class="filter-icon">🔒</span>
+                Cybersécurité
+            </button>
+            <button class="filter-btn" data-filter="cloud">
+                <span class="filter-icon">☁️</span>
+                Cloud Computing
+            </button>
+        </div>
+
+        <!-- Statistiques -->
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-icon">📊</div>
+                <div class="stat-number" id="totalArticles">0</div>
+                <div class="stat-label">Articles</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon">📁</div>
+                <div class="stat-number" id="totalCategories">3</div>
+                <div class="stat-label">Catégories</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-icon">🔄</div>
+                <div class="stat-number" id="lastUpdate">Aujourd'hui</div>
+                <div class="stat-label">Dernière MAJ</div>
+            </div>
+        </div>
+
+        <!-- Grille d'articles -->
+        <div class="articles-container" id="articlesContainer">
+            <!-- Les articles seront chargés dynamiquement depuis le JSON -->
+        </div>
+
+        <!-- Message si aucun article -->
+        <div class="no-articles" id="noArticles" style="display: none;">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <h3>Aucun article trouvé</h3>
+            <p>Essayez un autre filtre ou consultez tous les articles</p>
+        </div>
+
+        <!-- Section FAQ -->
+        <div class="faq-section">
+            <h2>Sources de veille</h2>
+            <div class="sources-grid">
+                <div class="source-card">
+                    <div class="source-icon">🌐</div>
+                    <h3>Sites spécialisés</h3>
+                    <p>LeMagIT, IT Social, Clubic Pro, ZDNet</p>
+                </div>
+                <div class="source-card">
+                    <div class="source-icon">📱</div>
+                    <h3>Réseaux sociaux</h3>
+                    <p>LinkedIn, Twitter/X, Reddit (r/sysadmin)</p>
+                </div>
+                <div class="source-card">
+                    <div class="source-icon">📰</div>
+                    <h3>Newsletters</h3>
+                    <p>TechCrunch, The Hacker News, Cisco Blog</p>
+                </div>
+                <div class="source-card">
+                    <div class="source-icon">🎓</div>
+                    <h3>Formations</h3>
+                    <p>Webinaires, certifications, conférences IT</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="veille.js"></script>
+</body>
+</html>
