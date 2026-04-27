@@ -539,3 +539,28 @@ nav {
         font-size: 14px;
     }
 }
+        /* Titre article cliquable */
+        .article-title a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .article-title a:hover {
+            color: #64c8ff;
+            text-decoration: underline;
+        }
+
+        /* Bouton titre long : texte tronqué */
+        .article-btn.btn-title {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: block;
+            padding: 12px 16px;
+        }
+
+        /* Bouton secondaire : largeur fixe */
+        .article-btn.btn-secondary {
+            flex: 0 0 auto;
+            white-space: nowrap;
+        }
