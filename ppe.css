@@ -3,14 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1729 100%);
     color: #fff;
     overflow-x: hidden;
 }
-
+ 
 /* Background */
 .bg-animation {
     position: fixed;
@@ -21,7 +21,7 @@ body {
     z-index: 0;
     opacity: 0.5;
 }
-
+ 
 .bg-animation::before {
     content: '';
     position: absolute;
@@ -31,12 +31,12 @@ body {
     background-size: 50px 50px;
     animation: moveGrid 20s linear infinite;
 }
-
+ 
 @keyframes moveGrid {
     0% { transform: translate(0, 0); }
     100% { transform: translate(50px, 50px); }
 }
-
+ 
 /* Navigation */
 nav {
     position: fixed;
@@ -52,7 +52,7 @@ nav {
     border-bottom: 1px solid rgba(100, 200, 255, 0.1);
     transition: all 0.3s;
 }
-
+ 
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -61,13 +61,13 @@ nav {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-
+ 
 .nav-links {
     display: flex;
     gap: 30px;
     list-style: none;
 }
-
+ 
 .nav-links a {
     color: #fff;
     text-decoration: none;
@@ -75,7 +75,7 @@ nav {
     transition: all 0.3s;
     position: relative;
 }
-
+ 
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -86,11 +86,11 @@ nav {
     background: linear-gradient(45deg, #64c8ff, #00ff88);
     transition: width 0.3s;
 }
-
+ 
 .nav-links a:hover::after {
     width: 100%;
 }
-
+ 
 /* Container principal */
 .main-container {
     position: relative;
@@ -99,19 +99,19 @@ nav {
     max-width: 1400px;
     margin: 0 auto;
 }
-
+ 
 /* Header */
 .page-header {
     text-align: center;
     margin-bottom: 60px;
     animation: fadeInDown 0.8s ease-out;
 }
-
+ 
 @keyframes fadeInDown {
     from { opacity: 0; transform: translateY(-30px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
+ 
 .page-title {
     font-size: 56px;
     margin-bottom: 20px;
@@ -120,7 +120,7 @@ nav {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-
+ 
 .page-subtitle {
     font-size: 20px;
     color: #a0a0b0;
@@ -128,7 +128,7 @@ nav {
     max-width: 800px;
     margin: 0 auto;
 }
-
+ 
 /* Section Tableau de synthèse — compacte */
 .intro-section {
     background: linear-gradient(135deg, rgba(100, 200, 255, 0.08) 0%, rgba(0, 255, 136, 0.04) 100%);
@@ -140,12 +140,12 @@ nav {
     position: relative;
     animation: fadeInUp 0.8s ease-out;
 }
-
+ 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
+ 
 .intro-badge {
     position: absolute;
     top: -13px;
@@ -157,11 +157,11 @@ nav {
     font-size: 13px;
     font-weight: 700;
 }
-
+ 
 .intro-content {
     /* hauteur libre, s'adapte au contenu */
 }
-
+ 
 /* Bloc téléchargement */
 .download-block {
     display: flex;
@@ -175,7 +175,7 @@ nav {
     width: 100%;
     margin: 0 auto;
 }
-
+ 
 .download-icon {
     width: 44px;
     height: 44px;
@@ -187,12 +187,12 @@ nav {
     justify-content: center;
     color: #0a0e27;
 }
-
+ 
 .download-icon svg {
     width: 22px;
     height: 22px;
 }
-
+ 
 .download-info {
     flex: 1;
     display: flex;
@@ -201,18 +201,18 @@ nav {
     text-align: left;
     min-width: 0;
 }
-
+ 
 .download-title {
     font-size: 15px;
     font-weight: 600;
     color: #fff;
 }
-
+ 
 .download-meta {
     font-size: 12px;
     color: #a0a0b0;
 }
-
+ 
 .download-btn {
     display: inline-flex;
     align-items: center;
@@ -229,18 +229,18 @@ nav {
     white-space: nowrap;
     flex-shrink: 0;
 }
-
+ 
 .download-btn svg {
     width: 15px;
     height: 15px;
 }
-
+ 
 .download-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(100, 200, 255, 0.4);
     opacity: 0.9;
 }
-
+ 
 /* Filtres */
 .filters {
     display: flex;
@@ -249,7 +249,7 @@ nav {
     margin-bottom: 60px;
     flex-wrap: wrap;
 }
-
+ 
 .filter-btn {
     padding: 12px 28px;
     background: rgba(100, 200, 255, 0.1);
@@ -260,7 +260,7 @@ nav {
     cursor: pointer;
     transition: all 0.3s;
 }
-
+ 
 .filter-btn:hover,
 .filter-btn.active {
     background: linear-gradient(45deg, #64c8ff, #00ff88);
@@ -268,7 +268,7 @@ nav {
     border-color: transparent;
     transform: translateY(-2px);
 }
-
+ 
 /* Grille de projets */
 .projects-grid {
     display: grid;
@@ -276,7 +276,7 @@ nav {
     gap: 35px;
     margin-bottom: 60px;
 }
-
+ 
 /* Carte projet */
 .project-card {
     background: rgba(20, 25, 45, 0.6);
@@ -288,14 +288,14 @@ nav {
     position: relative;
     animation: fadeInUp 0.8s ease-out;
 }
-
+ 
 .project-card:hover {
     transform: translateY(-10px);
     border-color: #64c8ff;
     box-shadow: 0 20px 50px rgba(100, 200, 255, 0.3);
     border-style: solid;
 }
-
+ 
 .project-image {
     width: 100%;
     height: 100%;
@@ -306,7 +306,7 @@ nav {
     position: relative;
     overflow: hidden;
 }
-
+ 
 .project-image::before {
     content: '';
     position: absolute;
@@ -320,14 +320,14 @@ nav {
         rgba(100, 200, 255, 0.05) 20px
     );
 }
-
+ 
 .project-image svg {
     width: 80px;
     height: 80px;
     color: #64c8ff;
     z-index: 1;
 }
-
+ 
 .project-placeholder-text {
     position: absolute;
     bottom: 20px;
@@ -340,24 +340,24 @@ nav {
     color: #64c8ff;
     z-index: 2;
 }
-
+ 
 .project-content {
     padding: 30px;
 }
-
+ 
 .project-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 15px;
 }
-
+ 
 .project-title {
     font-size: 22px;
     color: #fff;
     margin-bottom: 8px;
 }
-
+ 
 .project-category {
     display: inline-block;
     padding: 6px 14px;
@@ -368,14 +368,14 @@ nav {
     color: #64c8ff;
     font-weight: 600;
 }
-
+ 
 .project-date {
     color: #00ff88;
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 15px;
 }
-
+ 
 .project-description {
     color: #a0a0b0;
     line-height: 1.7;
@@ -383,20 +383,20 @@ nav {
     min-height: 80px;
     font-size: 15px;
 }
-
+ 
 .project-description.placeholder {
     color: #64c8ff;
     font-style: italic;
     text-align: center;
 }
-
+ 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 20px;
 }
-
+ 
 .tag {
     padding: 5px 12px;
     background: rgba(100, 200, 255, 0.1);
@@ -405,12 +405,12 @@ nav {
     font-size: 12px;
     color: #e0e0e0;
 }
-
+ 
 .project-footer {
     display: flex;
     gap: 12px;
 }
-
+ 
 .project-btn {
     flex: 1;
     padding: 12px 20px;
@@ -428,18 +428,18 @@ nav {
     justify-content: center;
     gap: 8px;
 }
-
+ 
 .project-btn:hover {
     background: rgba(100, 200, 255, 0.15);
     border-color: #64c8ff;
     transform: translateY(-2px);
 }
-
+ 
 .project-btn svg {
     width: 16px;
     height: 16px;
 }
-
+ 
 /* Section d'ajout */
 .add-project-section {
     background: linear-gradient(135deg, rgba(100, 200, 255, 0.05) 0%, rgba(0, 255, 136, 0.03) 100%);
@@ -448,19 +448,19 @@ nav {
     padding: 60px;
     text-align: center;
 }
-
+ 
 .add-project-section h3 {
     font-size: 28px;
     margin-bottom: 15px;
     color: #64c8ff;
 }
-
+ 
 .add-project-section p {
     color: #a0a0b0;
     font-size: 16px;
     margin-bottom: 25px;
 }
-
+ 
 .add-btn {
     padding: 15px 35px;
     background: linear-gradient(45deg, #64c8ff, #00ff88);
@@ -475,107 +475,107 @@ nav {
     align-items: center;
     gap: 10px;
 }
-
+ 
 .add-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(100, 200, 255, 0.4);
 }
-
+ 
 .add-btn svg {
     width: 20px;
     height: 20px;
 }
-
+ 
 /* Responsive */
 @media (max-width: 1024px) {
     .main-container {
         padding: 110px 30px 60px;
     }
-
+ 
     .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 25px;
     }
-
+ 
     .project-content {
         padding: 24px;
     }
-
+ 
     .page-title {
         font-size: 44px;
     }
-
+ 
     .intro-section {
         padding: 28px 24px;
     }
 }
-
+ 
 @media (max-width: 768px) {
     nav {
         padding: 15px 20px;
     }
-
+ 
     .nav-links {
         gap: 12px;
         flex-wrap: wrap;
         justify-content: flex-end;
     }
-
+ 
     .nav-links a {
         font-size: 14px;
     }
-
+ 
     .main-container {
         padding: 100px 20px 50px;
     }
-
+ 
     .page-title {
         font-size: 36px;
     }
-
+ 
     .page-subtitle {
         font-size: 17px;
     }
-
+ 
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-
+ 
     .intro-section {
         padding: 24px 16px;
         margin-bottom: 40px;
     }
-
+ 
     .intro-badge {
         left: 20px;
         top: -12px;
         padding: 5px 14px;
         font-size: 12px;
     }
-
+ 
     .project-title {
         font-size: 20px;
     }
-
+ 
     .project-description {
         min-height: auto;
         font-size: 14px;
     }
-
+ 
     .project-content {
         padding: 20px;
     }
-
+ 
     .project-footer {
         flex-direction: column;
     }
-
+ 
     .project-btn {
         width: 100%;
     }
 }
-
+ 
 @media (max-width: 600px) {
     .download-block {
         flex-direction: column;
@@ -584,20 +584,21 @@ nav {
         padding: 16px 14px;
         gap: 12px;
     }
-
+ 
     .download-info {
         text-align: center;
     }
-
+ 
     .download-title {
         font-size: 14px;
     }
-
+ 
     .download-meta {
         font-size: 11px;
     }
-
+ 
     .download-btn {
         width: 100%;
     }
 }
+ 
