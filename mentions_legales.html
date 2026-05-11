@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - Jason Boudet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1729 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(100, 200, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveGrid 20s linear infinite;
+        }
+
+        @keyframes moveGrid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(10, 14, 39, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(100, 200, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #64c8ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #64c8ff, #00ff88);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Container */
+        .main-container {
+            position: relative;
+            z-index: 1;
+            padding: 120px 50px 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page-title {
+            font-size: 48px;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #64c8ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-subtitle {
+            font-size: 18px;
+            color: #a0a0b0;
+        }
+
+        /* Content */
+        .legal-content {
+            background: rgba(20, 25, 45, 0.6);
+            border: 1px solid rgba(100, 200, 255, 0.2);
+            border-radius: 20px;
+            padding: 50px;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .legal-section {
+            margin-bottom: 40px;
+        }
+
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section h2 {
+            font-size: 24px;
+            color: #64c8ff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .legal-section h3 {
+            font-size: 20px;
+            color: #00ff88;
+            margin: 25px 0 15px;
+        }
+
+        .legal-section p {
+            color: #a0a0b0;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .legal-section ul {
+            color: #a0a0b0;
+            line-height: 1.8;
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .legal-section li {
+            margin-bottom: 8px;
+        }
+
+        .info-box {
+            background: rgba(100, 200, 255, 0.1);
+            border-left: 4px solid #64c8ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .info-box strong {
+            color: #64c8ff;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, rgba(100, 200, 255, 0.1) 0%, rgba(0, 255, 136, 0.05) 100%);
+            border: 1px solid rgba(100, 200, 255, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+            color: #e0e0e0;
+        }
+
+        .last-update {
+            text-align: center;
+            color: #64c8ff;
+            font-size: 14px;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(100, 200, 255, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 100px 30px 60px;
+            }
+
+            .page-title {
+                font-size: 36px;
+            }
+
+            .legal-content {
+                padding: 30px 20px;
+            }
+
+            nav {
+                padding: 15px 30px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <nav>
+        <div class="logo">&lt;JB/&gt;</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="ppe.html">Projets</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="page-header">
+            <h1 class="page-title">Mentions Légales</h1>
+            <p class="page-subtitle">Informations légales et conditions d'utilisation</p>
+        </div>
+
+        <div class="legal-content">
+            <!-- Éditeur du site -->
+            <div class="legal-section">
+                <h2>📝 Éditeur du site</h2>
+                <div class="contact-info">
+                    <p><strong>Nom :</strong> Jason Boudet</p>
+                    <p><strong>Statut :</strong> Portfolio personnel - Étudiant</p>
+                    <p><strong>Email :</strong> jason.boudet74@gmail.com</p>
+                    <p><strong>Téléphone :</strong> 06 06 98 07 32</p>
+                    <p><strong>Adresse :</strong> 1B sente aux Loups, 76150 Maromme, France</p>
+                </div>
+                <p>
+                    Ce site est un portfolio personnel présentant mes compétences, projets et 
+                    parcours professionnel dans le domaine de l'informatique et des réseaux.
+                </p>
+            </div>
+
+            <!-- Hébergement -->
+            <div class="legal-section">
+                <h2>🌐 Hébergement</h2>
+                <div class="info-box">
+                    <p><strong>Hébergeur :</strong> À compléter selon votre hébergeur</p>
+                    <p>Exemples : GitHub Pages, Netlify, Vercel, OVH, etc.</p>
+                </div>
+                <p>
+                    <em>Note : Veuillez renseigner les informations de votre hébergeur une fois déterminé.</em>
+                </p>
+            </div>
+
+            <!-- Propriété intellectuelle -->
+            <div class="legal-section">
+                <h2>©️ Propriété intellectuelle</h2>
+                <p>
+                    L'ensemble de ce site (structure, textes, logos, images, etc.) est la propriété 
+                    exclusive de Jason Boudet, sauf mention contraire.
+                </p>
+                <p>
+                    Toute reproduction, distribution, modification ou utilisation du contenu de ce 
+                    site, en tout ou partie, est strictement interdite sans autorisation écrite préalable.
+                </p>
+
+                <h3>Exceptions :</h3>
+                <ul>
+                    <li>Les articles de veille technologique provenant de sources externes sont la propriété de leurs auteurs respectifs</li>
+                    <li>Les logos et marques mentionnés (Microsoft, Cisco, VMware, etc.) appartiennent à leurs propriétaires respectifs</li>
+                    <li>Les icônes et illustrations peuvent provenir de bibliothèques open-source</li>
+                </ul>
+            </div>
+
+            <!-- Données personnelles -->
+            <div class="legal-section">
+                <h2>🔒 Protection des données personnelles (RGPD)</h2>
+                
+                <h3>Collecte des données</h3>
+                <p>
+                    Les informations personnelles collectées via le formulaire de contact 
+                    (nom, email, téléphone, message) sont uniquement destinées à répondre à vos demandes.
+                </p>
+
+                <h3>Utilisation des données</h3>
+                <p>Les données collectées sont utilisées exclusivement pour :</p>
+                <ul>
+                    <li>Répondre à vos demandes de contact</li>
+                    <li>Gérer les candidatures professionnelles</li>
+                    <li>Établir un échange dans le cadre d'opportunités professionnelles</li>
+                </ul>
+
+                <h3>Conservation des données</h3>
+                <p>
+                    Vos données sont conservées pendant une durée maximale de 3 ans à compter de 
+                    notre dernier contact, sauf obligation légale contraire.
+                </p>
+
+                <h3>Vos droits</h3>
+                <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+                <ul>
+                    <li><strong>Droit d'accès :</strong> Consulter les données vous concernant</li>
+                    <li><strong>Droit de rectification :</strong> Corriger vos données inexactes</li>
+                    <li><strong>Droit à l'effacement :</strong> Supprimer vos données</li>
+                    <li><strong>Droit d'opposition :</strong> Vous opposer au traitement de vos données</li>
+                    <li><strong>Droit à la portabilité :</strong> Récupérer vos données dans un format structuré</li>
+                </ul>
+                <p>
+                    Pour exercer ces droits, contactez-moi à : <strong>jason.boudet74@gmail.com</strong>
+                </p>
+            </div>
+
+            <!-- Cookies -->
+            <div class="legal-section">
+                <h2>🍪 Cookies</h2>
+                <p>
+                    Ce site n'utilise pas de cookies de tracking ou de publicité. 
+                    Aucune donnée de navigation n'est collectée à des fins commerciales.
+                </p>
+                <p>
+                    Les seuls cookies éventuellement utilisés sont des cookies techniques nécessaires 
+                    au bon fonctionnement du site (session, préférences d'affichage).
+                </p>
+            </div>
+
+            <!-- Liens externes -->
+            <div class="legal-section">
+                <h2>🔗 Liens externes</h2>
+                <p>
+                    Ce site peut contenir des liens vers des sites externes (articles de veille, 
+                    réseaux sociaux, GitHub, LinkedIn, etc.).
+                </p>
+                <p>
+                    Je ne peux être tenu responsable du contenu de ces sites tiers ni de leurs 
+                    pratiques en matière de protection des données personnelles.
+                </p>
+            </div>
+
+            <!-- Responsabilité -->
+            <div class="legal-section">
+                <h2>⚖️ Limitation de responsabilité</h2>
+                <p>
+                    Les informations présentes sur ce site sont fournies à titre indicatif. 
+                    Je m'efforce de maintenir ces informations à jour et exactes, mais ne peux 
+                    garantir l'exactitude, la complétude ou l'actualité des informations diffusées.
+                </p>
+                <p>
+                    Je ne saurais être tenu responsable des dommages directs ou indirects résultant 
+                    de l'utilisation de ce site ou de l'impossibilité de l'utiliser.
+                </p>
+            </div>
+
+            <!-- Droit applicable -->
+            <div class="legal-section">
+                <h2>⚖️ Droit applicable</h2>
+                <p>
+                    Les présentes mentions légales sont régies par le droit français. 
+                    Tout litige relatif à l'utilisation de ce site sera de la compétence 
+                    exclusive des tribunaux français.
+                </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="legal-section">
+                <h2>📧 Contact</h2>
+                <p>
+                    Pour toute question concernant ces mentions légales, la protection de vos 
+                    données ou l'utilisation de ce site, vous pouvez me contacter :
+                </p>
+                <div class="contact-info">
+                    <p><strong>Email :</strong> jason.boudet74@gmail.com</p>
+                    <p><strong>Téléphone :</strong> 06 06 98 07 32</p>
+                    <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/jason-boudet-23380a167" style="color: #64c8ff;">Jason Boudet</a></p>
+                </div>
+            </div>
+
+            <div class="last-update">
+                Dernière mise à jour : <strong>26 Mars 2025</strong>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animation navbar au scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 100) {
+                nav.style.background = 'rgba(10, 14, 39, 0.95)';
+                nav.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                nav.style.background = 'rgba(10, 14, 39, 0.9)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
